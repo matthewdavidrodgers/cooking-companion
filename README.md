@@ -24,28 +24,29 @@ Detects time requirements for a step, presents a timer when needed (can pull up 
 
 ### stack
 #### backend
-Language: Node
-Framework: Koa
-  consider - Express, Hapi
-DB: Mongo
-  (consider - search db)
-Validator - Joi
-Server - nginx (needed?)
+- Language: Node
+- Framework: Koa
+-   consider - Express, Hapi
+- DB: Mongo
+-   (consider - search db, i.e. algolia)
+- Validator - Joi
+- Server - nginx (needed?)
 
 #### frontend
-Language: ES2015
-  consider - Typescript, Elm
-Framework: React
-  consider - Vue
-State Management - Redux (needed?)
-Transpiler: Babel
-Bundler: Webpack
-  consider - Prepack
-Testing framework: Mocha
-  consider - Jest
-Templating Framework: Jade (if using Vue)
+- Language: ES2015
+-   consider - Typescript, Elm
+- Framework: React
+-   consider - Vue
+- State Management - Redux (needed?)
+- Transpiler: Babel
+- Bundler: Webpack
+-   consider - Prepack
+- Testing framework: Mocha
+-   consider - Jest
+- Templating Framework: Jade (if using Vue)
 
 #### other
-CI tools
-PaaS for hosting
-DaaS for Mongo
+- CI tools
+- PaaS for hosting
+- DaaS for Mongo
+- Auth0 plus id server
