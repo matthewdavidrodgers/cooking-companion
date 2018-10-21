@@ -1,25 +1,29 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+const plugins = [
+  new HtmlWebpackPlugin({
+    title: 'Cooking Companion',
+    template: './index.html',
+    inject: 'body'
+  })
+];
 
 module.exports = {
-  entry: './client',
+  entry: './client.tsx',
   output: {
     path: path.join(__dirname, '..', '..', 'dist', 'public'),
     filename: 'bundle.js'
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.json']
+    extensions: ['.ts', '.tsx', '.js', '.jsx', '.json']
   },
   module: {
-    rules: [
-      {
-        test: /\.tsx?$/,
-        use: 'awesome-typescript-loader'
-      }
-    ]
+    rules: [{
+      test: /\.tsx?$/,
+      use: 'awesome-typescript-loader'
+    }]
   },
-  devtool: 'inline-source-map',
-  externals: {
-      'react': 'React',
-      'react-dom': 'ReactDOM'
-  }
+  devtool: 'source-map',
+  plugins
 }

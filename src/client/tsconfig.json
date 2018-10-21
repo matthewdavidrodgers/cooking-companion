@@ -7,5 +7,5 @@
         "lib": ["es6", "dom"],
         "jsx": "react"
     },
-    "files": [ "./client.ts" ]
+    "files": [ "./client.tsx" ]
 }
