@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "sourceMap": true,
+        "module": "commonjs",
+        "outDir": "../../dist/client",
+        "lib": ["es6", "dom"],
+        "jsx": "react"
+    },
+    "files": [ "./client.ts" ]
+}
