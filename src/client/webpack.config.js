@@ -20,8 +20,8 @@ module.exports = {
   },
   module: {
     rules: [{
-      test: /\.tsx?$/,
-      use: 'awesome-typescript-loader'
+      test: /\.(ts|js)x?$/,
+      use: 'babel-loader'
     }]
   },
   devtool: 'source-map',

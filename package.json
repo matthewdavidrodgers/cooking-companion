@@ -5,7 +5,7 @@
     "lint": "tslint -c tslint.json 'src/**/*.ts' 'src/**/*.tsx'",
     "start": "npm run server",
     "build-client": "cd ./src/client && webpack -p",
-    "build-server": "tsc -p ./src/server",
+    "build-server": "cd ./src/server && babel --extensions '.ts' .",
     "build": "npm run build-client && npm run build-server",
     "client": "cd src/client && webpack-dev-server -w",
     "server": "node ./dist/server/server.js"
@@ -18,11 +18,17 @@
     "react-dom": "^16.5.2"
   },
   "devDependencies": {
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-typescript": "^7.1.0",
     "@types/koa": "^2.0.46",
     "@types/koa-send": "^4.1.1",
     "@types/node": "^10.12.0",
     "@types/react": "^16.4.18",
     "awesome-typescript-loader": "^5.2.1",
+    "babel-loader": "^8.0.4",
     "html-webpack-plugin": "^3.2.0",
     "tslint": "^5.11.0",
     "typescript": "^3.1.3",
