@@ -5,7 +5,7 @@
     "lint": "tslint -c tslint.json 'src/**/*.ts' 'src/**/*.tsx'",
     "start": "npm run server",
     "build-client": "cd ./src/client && webpack -p",
-    "build-server": "cd ./src/server && babel --extensions '.ts' .",
+    "build-server": "babel --presets=@babel/preset-env,@babel/preset-typescript ./src/server --out-dir ./dist/server --extensions \".ts,.js\"",
     "build": "npm run build-client && npm run build-server",
     "client": "cd src/client && webpack-dev-server -w",
     "server": "node ./dist/server/server.js"
