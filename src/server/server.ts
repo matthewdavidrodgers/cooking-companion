@@ -1,20 +1,21 @@
+require('@babel/polyfill');
+
 const Koa = require('koa');
 const Router = require('koa-router');
-const send = require('koa-send');
+const serve = require('koa-static');
 const path = require('path');
 
 const app = new Koa();
 const router = new Router();
+const PORT = process.env.PORT || 8080;
 
-const publicPath = path.join(__dirname, '..', '..', 'public');
-
-router.get('**', async (ctx: any, next: Function) => {
-  console.log('sending');
-  await send(ctx, '/Users/mrod/code/cooking-companion/public/index.html');
-});
+const publicPath = path.join(__dirname, '..', '..', 'dist', 'public');
 
 app
   .use(router.routes())
   .use(router.allowedMethods())
+  .use(serve(publicPath));
 
-app.listen(3000);
+app.listen(PORT);
+
+console.log(`server listening on port ${PORT}`);

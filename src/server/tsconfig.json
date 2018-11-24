@@ -7,7 +7,8 @@
         "noImplicitAny": true,
         "sourceMap": true,
         "outDir": "../../dist/server",
-        "allowJs": true
+        "allowJs": true,
+        "noEmit": true
     },
     "files": [ "./server.ts" ]
 }

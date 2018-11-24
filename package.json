@@ -2,18 +2,22 @@
   "name": "cooking-companion",
   "version": "0.0.1",
   "scripts": {
-    "lint": "tslint -c tslint.json 'src/**/*.ts' 'src/**/*.tsx'",
-    "start": "npm run server",
-    "build-client": "cd ./src/client && webpack -p",
-    "build-server": "babel --presets=@babel/preset-env,@babel/preset-typescript ./src/server --out-dir ./dist/server --extensions \".ts,.js\"",
-    "build": "npm run build-client && npm run build-server",
+    "lint": "tslint -c tslint.json 'src/**/*.ts' 'src/**/*.tsx' -t verbose",
+    "ts:server": "cd src/server && tsc",
+    "ts:client": "cd src/client && tsc",
+    "build:server": "rm -rf dist/server && babel src/server --out-dir dist/server --extensions \".ts,.js\"",
+    "build:client": "rm -rf dist/public && cd ./src/client && webpack -p",
+    "server": "source .env && node ./dist/server/server.js",
     "client": "cd src/client && webpack-dev-server -w",
-    "server": "node ./dist/server/server.js"
+    "ts": "yarn run ts:client && yarn run ts:server",
+    "build": "yarn run build:client && yarn run build:server",
+    "start": "yarn run server"
   },
   "dependencies": {
+    "@babel/polyfill": "^7.0.0",
     "koa": "^2.5.3",
     "koa-router": "^7.4.0",
-    "koa-send": "^5.0.0",
+    "koa-static": "^5.0.0",
     "react": "^16.5.2",
     "react-dom": "^16.5.2"
   },
@@ -27,7 +31,6 @@
     "@types/koa-send": "^4.1.1",
     "@types/node": "^10.12.0",
     "@types/react": "^16.4.18",
-    "awesome-typescript-loader": "^5.2.1",
     "babel-loader": "^8.0.4",
     "html-webpack-plugin": "^3.2.0",
     "tslint": "^5.11.0",

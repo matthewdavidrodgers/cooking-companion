@@ -5,7 +5,8 @@
         "module": "commonjs",
         "outDir": "../../dist/client",
         "lib": ["es6", "dom"],
-        "jsx": "react"
+        "jsx": "react",
+        "noEmit": true
     },
     "files": [ "./client.tsx" ]
 }

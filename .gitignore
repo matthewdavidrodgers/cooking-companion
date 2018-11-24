@@ -1,4 +1,5 @@
 dist
+.env
 .vscode
 *.log
 node_modules
