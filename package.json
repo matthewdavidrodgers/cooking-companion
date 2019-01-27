@@ -7,11 +7,9 @@
     "ts:client": "cd src/client && tsc",
     "build:server": "rm -rf dist/server && babel src/server --out-dir dist/server --extensions \".ts,.js\"",
     "build:client": "rm -rf dist/public && cd ./src/client && webpack -p",
-    "server": "node ./dist/server/server.js",
-    "client": "cd src/client && webpack-dev-server -w",
     "ts": "yarn run ts:client && yarn run ts:server",
     "build": "yarn run build:client && yarn run build:server",
-    "start": "yarn run server"
+    "start": "bash -c 'source .env && node ./dist/server/server.js'"
   },
   "dependencies": {
     "@babel/polyfill": "^7.0.0",
@@ -38,7 +36,6 @@
     "tslint": "^5.11.0",
     "typescript": "^3.1.3",
     "webpack": "^4.21.0",
-    "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.9"
+    "webpack-cli": "^3.1.2"
   }
 }
