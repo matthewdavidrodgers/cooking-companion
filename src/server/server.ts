@@ -1,9 +1,9 @@
-require('@babel/polyfill');
+import '@babel/polyfill';
 
-const Koa = require('koa');
-const Router = require('koa-router');
-const serve = require('koa-static');
-const path = require('path');
+import Koa from 'koa';
+import Router from 'koa-router';
+import serve from 'koa-static';
+import path from 'path';
 
 const app = new Koa();
 const router = new Router();

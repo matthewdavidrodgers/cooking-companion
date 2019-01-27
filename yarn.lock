@@ -759,12 +759,27 @@
   resolved "https://registry.yarnpkg.com/@types/koa-compose/-/koa-compose-3.2.2.tgz#dc106e000bbf92a3ac900f756df47344887ee847"
   integrity sha1-3BBuAAu/kqOskA91bfRzRIh+6Ec=
 
-"@types/koa-send@^4.1.1":
+"@types/koa-router@^7.0.39":
+  version "7.0.39"
+  resolved "https://registry.yarnpkg.com/@types/koa-router/-/koa-router-7.0.39.tgz#6167930552e6686f7b5731aa4618cee44fec6a43"
+  integrity sha512-B8b2qyl7ijLFz7ocqkWva4IJ1n4uY5dK7jtGhQ+YHIGTpzcZr4ldDSjZi/xIM+ko3xSu8oqlGbzWxeVXK3WnNg==
+  dependencies:
+    "@types/koa" "*"
+
+"@types/koa-send@*", "@types/koa-send@^4.1.1":
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/@types/koa-send/-/koa-send-4.1.1.tgz#88f57cbe0343c8204903f9096d8ff6b98ec3296f"
   integrity sha512-ODeofnQxlkAl5PvJXhgOF/hjX9cH47oDFDqH9nE0G6zcp/Rr0vjswe7tuA+b0ZhlBrkfmN9X8VhRqQCBeOtZrw==
   dependencies:
     "@types/koa" "*"
+
+"@types/koa-static@^4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@types/koa-static/-/koa-static-4.0.0.tgz#4cddce6adf45221bacfb2842b3621dc92f4d642c"
+  integrity sha512-qjT7JIV79ZQ9MFjrWLvmnrX9St4DFuT2tzSRpkzQHx4QQBrLR04FSZHhoFkrgNgojkTuX2uxshdoThxhIMWVqw==
+  dependencies:
+    "@types/koa" "*"
+    "@types/koa-send" "*"
 
 "@types/koa@*", "@types/koa@^2.0.46":
   version "2.0.46"
@@ -799,10 +814,10 @@
   resolved "https://registry.yarnpkg.com/@types/range-parser/-/range-parser-1.2.2.tgz#fa8e1ad1d474688a757140c91de6dace6f4abc8d"
   integrity sha512-HtKGu+qG1NPvYe1z7ezLsyIaXYyi8SoAVqWDZgDQ8dLrsZvSzUNCwZyfX33uhWxL/SU0ZDQZ3nwZ0nimt507Kw==
 
-"@types/react@^16.4.18":
-  version "16.4.18"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.4.18.tgz#2e28a2e7f92d3fa7d6a65f2b73275c3e3138a13d"
-  integrity sha512-eFzJKEg6pdeaukVLVZ8Xb79CTl/ysX+ExmOfAAqcFlCCK5TgFDD9kWR0S18sglQ3EmM8U+80enjUqbfnUyqpdA==
+"@types/react@^16.7.21":
+  version "16.7.21"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.7.21.tgz#17e45871a2502e33b12b63279f44e1c02a4632fc"
+  integrity sha512-8BPxwygC83LgaIjOVVLrzB4mpP2u1ih01fbfy76L3h9OgKN+fNyMVPXj/0mGpWnxImjiM/2lqb3YOeT2Ca+NYQ==
   dependencies:
     "@types/prop-types" "*"
     csstype "^2.2.0"
